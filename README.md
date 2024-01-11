@@ -1,5 +1,6 @@
 # Dateitransfer
 Jakub Kliemann - s85515
+
 Beleg UDP-Dateitransfer für Rechnernetze/Kommunikationssysteme
 
 Die Aufgabenstellung besteht aus den Teilen:
@@ -10,6 +11,7 @@ Die Aufgabenstellung besteht aus den Teilen:
 * [Abgabeformat](Beleg-Abgabeformat.md)
 * [Git/Github-Nutzung](https://github.com/HTWDD-RN/RTSP-Streaming/blob/master/git.md).
 
+Funktionalität der Programme (was funktioniert und was funktioniert nicht):
 
 - Funktion des Clients + Server ohne Fehlersimulation erfolgreich getestet
 - Funktion des Clients + Server mit Fehlersimulation erfolgreich getestet
