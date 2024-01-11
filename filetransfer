@@ -1,0 +1,8 @@
+#!/bin/bash
+# Client zu 3333
+
+# cd bin
+# java FileCopy localhost 3333 ../dd1.jpg
+# cd ..
+
+java -cp bin:s85515/bin FileCopy $1 $2 $3 $4 > /dev/null
