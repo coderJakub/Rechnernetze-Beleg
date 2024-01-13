@@ -26,7 +26,7 @@ public class FileCopy {
      * Level.ALL: debugging information (headers, received packages and so on)
      */
     logger.setLevel(Level.CONFIG);
-    logger.setLevel(Level.INFO);
+    logger.setLevel(Level.ALL);
 
     // CHANGE: Check args.length & args[0] in one go to avoid further bugs
     // e.g. starting client with 2 arguments only or exit without message for unknown args[0]

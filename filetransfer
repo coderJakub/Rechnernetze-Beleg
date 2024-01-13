@@ -5,4 +5,4 @@
 # java FileCopy localhost 3333 ../dd1.jpg
 # cd ..
 
-java -cp bin:s85515/bin FileCopy $1 $2 $3 $4 > /dev/null
+java -cp bin:s85515/bin FileCopy $1 $2 $3 $4 $5

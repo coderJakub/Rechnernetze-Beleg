@@ -17,6 +17,7 @@ public class SW extends ARQAbst{
 
     @Override
     public void closeConnection() {
+        socket.setTimeout(2000);
         logger.log(Level.INFO, "Server-SW: waiting for repeated packets because of lost ACK ");
         DatagramPacket dataPacket; //Datenpaket erstellen
 
@@ -28,14 +29,12 @@ public class SW extends ARQAbst{
                 return;
             }
 
-            if ((byte)getPacketNr(dataPacket) < this.pNr) {
+	    if(getSessionID(dataPacket)!=sessionID)continue;
+            
+	    if ((byte)getPacketNr(dataPacket) < this.pNr) {
                 logger.log(Level.FINEST, "Server-SW: Out of order-Packet received: " + pNr + " != " + this.pNr);
                 sendAck(pNr-1);
             }
-
-            sendAck(pNr);
-            pNr=(pNr+1)%256;
-            if(pNr%128==0)overflowFlag=!overflowFlag;
         }
     }
 

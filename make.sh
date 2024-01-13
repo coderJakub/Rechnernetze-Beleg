@@ -4,4 +4,4 @@ if [ ! -d "bin" ]; then
   mkdir bin
 fi
 
-javac -d bin *.java > /dev/null
+javac -d bin src/*.java > /dev/null

@@ -120,7 +120,7 @@ public class FileTransfer implements  FT{
 
             if (!mARQ.data_req(bos.toByteArray(), 1400, false)) return false;
 
-            progressTracker.updateDataSent(1400);
+            progressTracker.updateDataSent(dataPointer+1400<file.length()?1400:(int)file.length()-dataPointer);
             bos.reset();
         }
 
